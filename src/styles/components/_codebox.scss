@@ -1,0 +1,26 @@
+.code-box-container {
+  width: 45vw;
+  height: 50vh;
+  margin-left: 2.5vw;
+  margin-right: 2.5vw;
+
+  h3 {
+    color: white;
+    margin-left: 10px;
+  }
+
+  pre {
+    width: 100%;
+    height: 100%;
+  }
+
+  pre {
+    width: 100%;
+    height: 100%;
+    border-style: none;
+    border-color: Transparent;
+    overflow: auto;
+    background-color: #333333;
+  }
+
+}
