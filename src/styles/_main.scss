@@ -11,7 +11,7 @@ html {
 body {
   background: #FFF;
   color: #555555;
-  font-family: Helvetica-Now-Regular, Arial, sans-serif;
+  font-family: Quicksand, Arial, sans-serif;
   font-size: 1.6rem;
   overflow-x: hidden;
 }
@@ -29,10 +29,16 @@ button:hover {
 
 
 .main-container {
+  font-family: Quicksand;
   background: #4F4F4F;
   width: 100vw;
   height: 100vh;
 }
 
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+
 // Components
 @import "components/navigationbar";
+@import "components/infocontainer";
