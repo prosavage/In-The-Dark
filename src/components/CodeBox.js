@@ -1,11 +1,18 @@
 import React, {Component} from 'react';
-import "./../styles/prism.css"
-import {htmlSnippet, cssSnippet} from "./../Snippets"
-
+import {htmlSnippet, cssSnippet} from "../Snippets";
 
 
 class CodeBox extends Component {
 
+
+
+    componentDidMount() {
+        if (this.props.language === "html") {
+            document.getElementById(this.props.language).value = htmlSnippet.props.children;
+        } else {
+            document.getElementById(this.props.language).value = cssSnippet.props.children;
+        }
+    }
 
     processTabs = (e) => {
         const keyCode = e.keyCode || e.which;
@@ -28,7 +35,7 @@ class CodeBox extends Component {
         return (
             <div className={"code-box-container"}>
                 <h3>{this.props.language.toUpperCase()}</h3>
-               <textarea ref={(ref) => {this.textarearef = ref}} id={this.props.language} onKeyDown={(e) => this.processTabs(e)} contentEditable={true}>{this.props.language === "html" ? htmlSnippet : cssSnippet}</textarea>
+                <textarea ref={(ref) => {this.textarearef = ref}} id={this.props.language} onKeyDown={(e) => this.processTabs(e)}/>
             </div>
 
         );
