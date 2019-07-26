@@ -11,8 +11,8 @@ function App() {
 
 
     function submit() {
-        axios.post("http://localhost:4000/data", {
-            user: "Naman Gupta",
+        axios.post("http://localhost:4000/", {
+            user: document.getElementById("name").value,
             html: document.getElementById("html").value,
             css: document.getElementById("css").value
         }).then(function (response) {
@@ -29,6 +29,7 @@ function App() {
         <h3>Welcome to In The Dark!</h3>
         <br/>
         <p>This is a web programming challenge with 1 simple rule, you cannot preview your website until you submit, the competition is a gauge of who can recreate a website in ONE try as close as possible.</p>
+        <input id={"name"}/>
         <button onClick={() => submit()}>Submit</button>
       </InfoContainer>
         <CodeArea>
